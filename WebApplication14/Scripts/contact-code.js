@@ -34,7 +34,7 @@ app.controller('ContactController', function ($scope,ContactService) {
     }
  
     //Function to Submit the form
-    $scope.submitForm = function (formValid) {
+    $scope.submitWEBAPI = function (formValid) {
 
         var Contact = {};
 
@@ -55,7 +55,7 @@ app.controller('ContactController', function ($scope,ContactService) {
         });
     };
     //Function to Cancel Form
-    $scope.cancelForm = function () {
+    $scope.resetPage = function () {
         initialize();
     };
 });
