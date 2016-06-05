@@ -1,0 +1,71 @@
+﻿@{
+    Layout = null;
+    //ViewBag.Title = "Contact";
+}
+
+<script src="~/Scripts/angular.min.js"></script>
+<script src="~/Scripts/contact-code.js"></script>
+<style>
+  /** BASIC STYLING INCLUDED**/
+  #tableContainer { width: 100%; max-width:800px;}
+  table  { width: 100% }
+  tr td:first-child { width : 200px }
+  textarea { width: 100%}
+  input[type=text]  {width:100%}
+  input[type=email] {width:100%}
+</style>
+<center>
+<div ng-app="ContactApp" ng-controller="ContactController">
+<br />
+<form id="ContactForm">
+    <div id="tableContainer">
+        <table>
+            <tr><td colspan="2" style="text-align:center"><h1>Contact Information </h1><h2>ASPNET MVC WEBAPI2 - ANGULAR (WITHOUT POSTBACK)</h2></td></tr>
+            <tr><td colspan="2" style="text-align:center">Please enter your contact information and a sales person will respond within 24 hours.<br /><br /></td></tr>
+            <tr>
+                <td>Name</td>
+                <td>
+                    <input type="text" id="name" ng-model="ContactName" />
+                </td>
+            </tr>
+            <tr>
+                <td>Email Address</td>
+                <td>
+                    <input type="email" id="email" ng-model="EmailAddress" />
+                </td>
+            </tr>
+            <tr><td>Telephone Number </td><td><input type="text" id="telephone" ng-model="TelephoneNumber" /></td></tr>
+            <tr><td>Message</td><td><textarea id="message" ng-model="Message"></textarea></td></tr>
+            <tr>
+                <td></td>
+                <td style="float:right;">
+                    <input type="button" value="Cancel" ng-click="cancelForm();" />
+                    &nbsp;
+                    <input type="button" value="Submit" ng-click="submitForm();" />
+                </td>
+            </tr>
+        </table>
+        <div style="text-align:left">
+            <br />
+            Commercial version would include:<br />
+            *field validations (required, telephone, email)<br />
+            *denial of service and no robot code add CAPTCHA<br />
+            *css formatting<br />
+            *administraton screen for editing and reviewing users<br />
+            *mobile testing<br />
+            *ip address logging and maximum inserts per timeframe<br/>
+            *popups aren't alert statements
+        </div>
+    </div>   
+</form>
+</div>
+</center>
+
+
+
+
+
+
+
+
+
