@@ -1,5 +1,4 @@
 ﻿
-
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -15,7 +14,7 @@ namespace UnitTestProject1
             Contact newContact = new Contact();
 
             newContact.ContactName = "ERIC";
-            newContact.EmailAddress = "eric@gmail.com";
+            newContact.EmailAddress = "eric.delloro@gmail.com";
             newContact.Message = "Hello World " + DateTime.Now.TimeOfDay.ToString();
 
             bool testresult = true;
@@ -37,11 +36,7 @@ namespace UnitTestProject1
                 testresult = false;
             }
 
-            Assert.AreEqual(testresult, true, "CONTACT RECORD SAVED");
+            Assert.AreEqual(testresult, true, "CONTACT RECORD SAVE FAILED");
         }
-
-
-
     }
-
 }

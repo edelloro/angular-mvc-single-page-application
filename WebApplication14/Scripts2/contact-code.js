@@ -1,7 +1,4 @@
-﻿// 18-JUNE-2016
-// ANGULAR CODE TO DO A CONTACTUS FORM
-// ERIC DELL'ORO
-
+﻿
 
 var app = angular.module("ContactApp" , []);
 
@@ -27,7 +24,7 @@ app.service("ContactService", function ($http) {
 
 app.controller('ContactController', function ($scope,ContactService) {
    
-    //FUNCTION TO RESET SCOPE VARIABLES
+    //Function to Reset Scope variables
     function initialize() {
         $scope.Id = ""; //AUTO INCREMENT
         $scope.ContactName = "";
@@ -36,7 +33,7 @@ app.controller('ContactController', function ($scope,ContactService) {
         $scope.Message = "";
     }
  
-    //FUNCTION TO SUBMIT THE FORM
+    //Function to Submit the form
     $scope.submitWEBAPI = function (formValid) {
 
         var Contact = {};
@@ -57,8 +54,7 @@ app.controller('ContactController', function ($scope,ContactService) {
             alert("An error occured saving the request.");
         });
     };
-
-    //FUNCTION TO CANCEL FORM
+    //Function to Cancel Form
     $scope.resetPage = function () {
         initialize();
     };
